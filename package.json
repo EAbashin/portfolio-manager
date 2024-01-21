@@ -1,0 +1,24 @@
+{
+  "name": "portfolio-manager",
+  "version": "1.0.0",
+  "description": "Portfolio Tracker & Manager App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "portfolio",
+    "fund",
+    "stock",
+    "tracker",
+    "manager",
+    "advisor",
+    "web",
+    "app"
+  ],
+  "author": "Evgeniy Abashin",
+  "devDependencies": {
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
