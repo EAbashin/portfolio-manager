@@ -5,17 +5,21 @@
     "module": "ESNext",
     "target": "es5",
     "jsx": "react-jsx",
+    "allowUmdGlobalAccess": true,
     "allowJs": true,
     "moduleResolution": "node",
 
-    // "baseUrl": ".",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["./src/*"]
+    },
 
     "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
+    "esModuleInterop": true
   },
   "ts-node": {
     "compilerOptions": {
-      "module": "CommonJS",
-    },
-  },
+      "module": "CommonJS"
+    }
+  }
 }
