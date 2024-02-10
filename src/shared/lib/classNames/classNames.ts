@@ -1,13 +1,13 @@
 type Mods = Record<string, boolean | string>;
 
-export function classNames(
+export const classNames = (
   cls: string,
-  mods: Mods,
-  additional?: string[],
-): string {
+  additional: string[] = [],
+  mods: Mods = {},
+): string => {
   const modClasses: string[] = Object.entries(mods)
     .filter(([_className, value]) => value)
     .map(([className]) => className);
 
-  return [cls, ...additional, ...modClasses].join(" ");
-}
+  return [cls, ...additional.filter(Boolean), ...modClasses].join(" ");
+};

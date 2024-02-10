@@ -2,12 +2,11 @@
 @import "core/variables";
 @import "themes/light";
 @import "themes/dark";
+@import "themes/orange";
 
 .app {
   font: var(--font-m);
-
   background: var(--bg-color);
   color: var(--primary-color);
-
   min-height: 100vh;
 }

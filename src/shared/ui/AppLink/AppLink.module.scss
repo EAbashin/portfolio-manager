@@ -1,0 +1,25 @@
+.app-link {
+  &.primary {
+    color: var(--primary-color);
+
+    &:hover {
+      color: var(--accent-redesigned);
+    }
+  }
+
+  &.inverted {
+    color: var(--inverted-primary-color);
+
+    &:hover {
+      color: var(--accent-redesigned);
+    }
+  }
+
+  &.red {
+    color: var(--cancel-redesigned);
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
