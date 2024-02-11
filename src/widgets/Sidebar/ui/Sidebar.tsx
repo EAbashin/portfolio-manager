@@ -1,8 +1,11 @@
 import { FC, useState } from "react";
-import { classNames } from "shared/lib/classNames/classNames";
+
 import cls from "./Sidebar.module.scss";
+
 import { AppButton } from "shared/ui/AppButton/AppButton";
 import { ThemeSwitcher } from "shared/ui/ThemeSwitcher/ui/ThemeSwitcher";
+import { classNames } from "shared/lib/classNames/classNames";
+import { LanguageSwitcher } from "shared/ui/LanguageSwitcher";
 
 interface SidebarProps {
   className?: string;
@@ -24,7 +27,7 @@ export const Sidebar: FC<SidebarProps> = (props) => {
       </AppButton>
       <div className={cls.switchers}>
         <ThemeSwitcher />
-        {/* LangSwitcher*/}
+        <LanguageSwitcher />
       </div>
     </div>
   );

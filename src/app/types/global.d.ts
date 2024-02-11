@@ -14,3 +14,5 @@ declare module "*.jpeg";
 declare module "*.gif";
 declare module "*.woff2";
 declare module "*.woff";
+
+declare const __IS_DEV__: boolean;

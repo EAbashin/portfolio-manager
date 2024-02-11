@@ -1,6 +1,8 @@
 import { ButtonHTMLAttributes, FC, ReactNode, memo } from "react";
-import { Mods, classNames } from "shared/lib/classNames/classNames";
+
 import cls from "./AppButton.module.scss";
+
+import { Mods, classNames } from "shared/lib/classNames/classNames";
 
 export type AppButtonVariant = "clear" | "outline" | "filled";
 export type AppButtonColor = "normal" | "success" | "error";
