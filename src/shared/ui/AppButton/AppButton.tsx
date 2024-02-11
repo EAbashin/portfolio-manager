@@ -1,11 +1,11 @@
-import { ButtonHTMLAttributes, FC, ReactNode } from "react";
+import { ButtonHTMLAttributes, FC, ReactNode, memo } from "react";
 import { Mods, classNames } from "shared/lib/classNames/classNames";
 import cls from "./AppButton.module.scss";
 
 export type AppButtonVariant = "clear" | "outline" | "filled";
 export type AppButtonColor = "normal" | "success" | "error";
 
-export type AppButtonSize = "m" | "l" | "xl";
+export type AppButtonSize = "s" | "m" | "l" | "xl";
 
 interface AppButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
@@ -40,7 +40,7 @@ interface AppButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   addonRight?: ReactNode;
 }
 
-export const AppButton: FC<AppButtonProps> = (props) => {
+export const AppButton: FC<AppButtonProps> = memo((props) => {
   const {
     className,
     children,
@@ -72,4 +72,4 @@ export const AppButton: FC<AppButtonProps> = (props) => {
       {children}
     </button>
   );
-};
+});

@@ -67,6 +67,11 @@
     padding: 0;
   }
 
+  &.square.s {
+    width: var(--font-line-s);
+    height: var(--font-line-s);
+  }
+
   &.square.m {
     width: var(--font-line-m);
     height: var(--font-line-m);
@@ -80,6 +85,10 @@
   &.square.xl {
     width: var(--font-line-xl);
     height: var(--font-line-xl);
+  }
+
+  &.s {
+    font: var(--font-s-redesigned);
   }
 
   &.m {
