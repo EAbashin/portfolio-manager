@@ -1,77 +1,86 @@
-import { ButtonHTMLAttributes, FC, ReactNode, memo } from "react";
+import {
+  type ButtonHTMLAttributes,
+  type FC,
+  type ReactNode,
+  memo
+} from 'react'
 
-import cls from "./AppButton.module.scss";
+import cls from './AppButton.module.scss'
 
-import { Mods, classNames } from "shared/lib/classNames/classNames";
+import { type Mods, classNames } from 'shared/lib/classNames/classNames'
 
-export type AppButtonVariant = "clear" | "outline" | "filled";
-export type AppButtonColor = "normal" | "success" | "error";
+export type AppButtonVariant = 'clear' | 'outline' | 'filled'
+export type AppButtonColor = 'normal' | 'success' | 'error'
 
-export type AppButtonSize = "s" | "m" | "l" | "xl";
+export type AppButtonSize = 's' | 'm' | 'l' | 'xl'
 
 interface AppButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  className?: string;
+  className?: string
   /**
    * Тема кнопки. Отвечает за визуал (в рамке, без стилей, противоположный теме приложения цвет и тд)
    */
-  variant?: AppButtonVariant;
+  variant?: AppButtonVariant
   /**
    * Флаг, делающий кнопку квадратной
    */
-  square?: boolean;
+  square?: boolean
   /**
    * Размер кнопки в соответствии с дизайн системой
    */
-  size?: AppButtonSize;
+  size?: AppButtonSize
   /**
    * Флаг, отвечающий за работу кнопки
    */
-  disabled?: boolean;
+  disabled?: boolean
   /**
    * Содержимое кнопки
    */
-  children?: ReactNode;
+  children?: ReactNode
   /**
    * Увеличивает кнопку на всю свободную ширину
    */
-  fullWidth?: boolean;
+  fullWidth?: boolean
 
-  color?: AppButtonColor;
+  color?: AppButtonColor
 
-  addonLeft?: ReactNode;
-  addonRight?: ReactNode;
+  addonLeft?: ReactNode
+  addonRight?: ReactNode
 }
 
-export const AppButton: FC<AppButtonProps> = memo((props) => {
+const AppButton: FC<AppButtonProps> = memo((props) => {
   const {
     className,
     children,
-    variant = "outline",
+    variant = 'outline',
     square,
     disabled,
     fullWidth,
-    size = "m",
+    size = 'm',
     addonLeft,
     addonRight,
-    color = "normal",
+    color = 'normal',
     ...otherProps
-  } = props;
+  } = props
 
-  const additional = [className, cls[variant], cls[size], cls[color]];
+  const additional = [className ?? '', cls[variant], cls[size], cls[color]]
 
   const mods: Mods = {
     [cls.square]: square,
     [cls.disabled]: disabled,
     [cls.fullWidth]: fullWidth,
-    [cls.withAddon]: Boolean(addonLeft) || Boolean(addonRight),
-  };
+    [cls.withAddon]: Boolean(addonLeft) || Boolean(addonRight)
+  }
 
   return (
     <button
-      className={classNames(cls["app-button"], additional, mods)}
+      className={classNames(cls['app-button'], additional, mods)}
       {...otherProps}
     >
       {children}
     </button>
-  );
-});
+  )
+})
+
+AppButton.displayName = 'AppButton'
+
+export { AppButton }

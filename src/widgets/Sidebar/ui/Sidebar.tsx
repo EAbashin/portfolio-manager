@@ -1,27 +1,29 @@
-import { FC, useState } from "react";
+import { type FC, useState } from 'react'
 
-import cls from "./Sidebar.module.scss";
+import cls from './Sidebar.module.scss'
 
-import { AppButton } from "shared/ui/AppButton/AppButton";
-import { ThemeSwitcher } from "shared/ui/ThemeSwitcher/ui/ThemeSwitcher";
-import { classNames } from "shared/lib/classNames/classNames";
-import { LanguageSwitcher } from "shared/ui/LanguageSwitcher";
+import { AppButton } from 'shared/ui/AppButton/AppButton'
+import { ThemeSwitcher } from 'shared/ui/ThemeSwitcher/ui/ThemeSwitcher'
+import { classNames } from 'shared/lib/classNames/classNames'
+import { LanguageSwitcher } from 'shared/ui/LanguageSwitcher'
 
 interface SidebarProps {
-  className?: string;
+  className?: string
 }
 
 export const Sidebar: FC<SidebarProps> = (props) => {
-  const { className } = props;
+  const { className } = props
 
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(false)
 
-  const mods = { [cls.collapsed]: collapsed };
+  const mods = { [cls.collapsed]: collapsed }
 
-  const toggleIsCollapsed = () => setCollapsed((prev) => !prev);
+  const toggleIsCollapsed = (): void => {
+    setCollapsed((prev) => !prev)
+  }
 
   return (
-    <div className={classNames(cls.sidebar, [className], mods)}>
+    <div className={classNames(cls.sidebar, [className ?? ''], mods)}>
       <AppButton size="s" onClick={toggleIsCollapsed}>
         Toggle
       </AppButton>
@@ -30,5 +32,5 @@ export const Sidebar: FC<SidebarProps> = (props) => {
         <LanguageSwitcher />
       </div>
     </div>
-  );
-};
+  )
+}
