@@ -1,4 +1,4 @@
-import { lazy } from 'react'
+import { lazy } from "react";
 
 const AboutPageLazy = lazy(
   async () =>
@@ -6,9 +6,9 @@ const AboutPageLazy = lazy(
       setTimeout(() => {
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
         // @ts-expect-error
-        resolve(import('./AboutPage'))
-      }, 1500)
-    )
-)
+        resolve(import("./AboutPage"));
+      }, 1500),
+    ),
+);
 
-export default AboutPageLazy
+export default AboutPageLazy;

@@ -1,17 +1,17 @@
-import { type ReactElement, Suspense } from 'react'
-import 'app/styles/index.scss'
+import { Suspense } from "react";
+import "app/styles/index.scss";
 
-import { useTheme } from 'app/providers/ThemeProvider'
-import { classNames } from 'shared/lib/classNames/classNames'
-import { AppRouter } from 'app/providers/router'
-import { Navbar } from 'widgets/Navbar'
-import { Sidebar } from 'widgets/Sidebar'
+import { useTheme } from "app/providers/ThemeProvider";
+import { classNames } from "shared/lib/classNames/classNames";
+import { AppRouter } from "app/providers/router";
+import { Navbar } from "widgets/Navbar";
+import { Sidebar } from "widgets/Sidebar";
 
-function App (): ReactElement {
-  const { theme } = useTheme()
+function App(): React.ReactElement {
+  const { theme } = useTheme();
 
   return (
-    <div className={classNames('app', [theme])}>
+    <div className={classNames("app", [theme])}>
       <Suspense fallback="">
         <Navbar />
         <div className="content-page">
@@ -20,7 +20,7 @@ function App (): ReactElement {
         </div>
       </Suspense>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

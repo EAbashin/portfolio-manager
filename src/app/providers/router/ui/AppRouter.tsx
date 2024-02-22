@@ -1,14 +1,14 @@
-import { type FC, Suspense } from 'react'
-import { useTranslation } from 'react-i18next'
-import { Route, Routes } from 'react-router-dom'
+import { type FC, Suspense } from "react";
+import { useTranslation } from "react-i18next";
+import { Route, Routes } from "react-router-dom";
 
-import { routConfig } from 'shared/config/routeConfig/routeConfig'
+import { routConfig } from "shared/config/routeConfig/routeConfig";
 
 const AppRouter: FC = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   return (
-    <Suspense fallback={<div className="page-wrapper">{t('Загрузка')}...</div>}>
+    <Suspense fallback={<div className="page-wrapper">{t("Загрузка")}...</div>}>
       <Routes>
         {Object.values(routConfig).map(({ path, element }) => (
           <Route
@@ -19,7 +19,7 @@ const AppRouter: FC = () => {
         ))}
       </Routes>
     </Suspense>
-  )
-}
+  );
+};
 
-export default AppRouter
+export default AppRouter;

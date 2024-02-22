@@ -1,30 +1,30 @@
-import { type FC, memo } from 'react'
-import { Theme, useTheme } from 'app/providers/ThemeProvider'
+import { type FC, memo } from "react";
+import { Theme, useTheme } from "app/providers/ThemeProvider";
 
-import LightIcon from 'shared/assets/icons/theme-light.svg'
-import DarkIcon from 'shared/assets/icons/theme-dark.svg'
-import { AppButton } from 'shared/ui/AppButton/AppButton'
-import { classNames } from 'shared/lib/classNames/classNames'
+import LightIcon from "shared/assets/icons/theme-light.svg";
+import DarkIcon from "shared/assets/icons/theme-dark.svg";
+import { AppButton } from "shared/ui/AppButton/AppButton";
+import { classNames } from "shared/lib/classNames/classNames";
 
 interface ThemeSwitcherProps {
-  className?: string
+  className?: string;
 }
 
 const ThemeSwitcher: FC<ThemeSwitcherProps> = memo((props) => {
-  const { className } = props
-  const { theme, toggleTheme } = useTheme()
+  const { className } = props;
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <AppButton
       variant="clear"
-      className={classNames('', [className ?? ''])}
+      className={classNames("", [className ?? ""])}
       onClick={toggleTheme}
     >
       {theme === Theme.DARK ? <DarkIcon /> : <LightIcon />}
     </AppButton>
-  )
-})
+  );
+});
 
-ThemeSwitcher.displayName = 'ThemeSwitcher'
+ThemeSwitcher.displayName = "ThemeSwitcher";
 
-export { ThemeSwitcher }
+export { ThemeSwitcher };
