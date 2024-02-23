@@ -5,15 +5,6 @@
   display: flex;
   align-items: center;
 
-  &:hover {
-    color: var(--accent-redesigned);
-
-    .addonLeft svg,
-    .addonRight svg {
-      color: var(--accent-redesigned);
-    }
-  }
-
   &.withAddon {
     padding: 0 16px;
   }
@@ -26,6 +17,15 @@
   &.addonRight svg,
   &.addonLeft svg {
     color: var(--hint-redesigned);
+  }
+
+  &:hover {
+    color: var(--accent-redesigned);
+
+    .addonLeft svg,
+    .addonRight svg {
+      color: var(--accent-redesigned);
+    }
   }
 
   &.clear {
