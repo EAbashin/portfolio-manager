@@ -8,6 +8,7 @@ module.exports = {
     "plugin:react/recommended",
     "prettier",
     "plugin:i18next/recommended",
+    "stylelint-prettier/recommended",
   ],
   overrides: [
     {
@@ -29,7 +30,7 @@ module.exports = {
       version: "detect",
     },
   },
-  plugins: ["react", "i18next"],
+  plugins: ["react", "i18next", "stylelint-prettier"],
   rules: {
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
