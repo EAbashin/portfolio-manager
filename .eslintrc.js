@@ -6,9 +6,8 @@ module.exports = {
   extends: [
     "standard-with-typescript",
     "plugin:react/recommended",
-    "prettier",
     "plugin:i18next/recommended",
-    "stylelint-prettier/recommended",
+    "prettier",
   ],
   overrides: [
     {
@@ -30,7 +29,7 @@ module.exports = {
       version: "detect",
     },
   },
-  plugins: ["react", "i18next", "stylelint-prettier"],
+  plugins: ["react", "i18next"],
   rules: {
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
