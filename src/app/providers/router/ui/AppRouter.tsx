@@ -1,14 +1,12 @@
+import { LoaderPage } from "pages/LoaderPage";
 import { type FC, Suspense } from "react";
-import { useTranslation } from "react-i18next";
 import { Route, Routes } from "react-router-dom";
 
 import { routConfig } from "shared/config/routeConfig/routeConfig";
 
 const AppRouter: FC = () => {
-  const { t } = useTranslation();
-
   return (
-    <Suspense fallback={<div className="page-wrapper">{t("Загрузка")}...</div>}>
+    <Suspense fallback={<div className="page-wrapper">{<LoaderPage />}</div>}>
       <Routes>
         {Object.values(routConfig).map(({ path, element }) => (
           <Route
