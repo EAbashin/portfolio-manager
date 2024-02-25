@@ -4,7 +4,7 @@ import { classNames } from "shared/lib/classNames/classNames";
 import cls from "./NotFoundPage.module.scss";
 
 const NotFoundPage: FC = () => {
-  const { t } = useTranslation("notFoundPage");
+  const { t } = useTranslation("notFound");
 
   return (
     <div className={classNames(cls["not-found-page"])}>
