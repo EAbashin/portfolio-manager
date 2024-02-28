@@ -22,5 +22,11 @@
     "compilerOptions": {
       "module": "CommonJS"
     }
+  },
+  "ts-jest": {
+    "tsconfig": {
+      "jsx": "react-jsx"
+    }
   }
+  // "include": ["./config/jest/jestSetup.ts"]
 }

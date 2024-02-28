@@ -33,5 +33,6 @@ module.exports = {
   rules: {
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
+    "import/consistent-type-specifier-style": ["error", "prefer-top-level"],
   },
 };

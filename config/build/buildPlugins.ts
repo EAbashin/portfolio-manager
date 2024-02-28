@@ -2,11 +2,12 @@ import MiniCssExtractPlugin from "mini-css-extract-plugin";
 import {
   DefinePlugin,
   HotModuleReplacementPlugin,
-  ProgressPlugin,
-  type WebpackPluginInstance,
+  ProgressPlugin
+  
 } from "webpack";
+import type {WebpackPluginInstance} from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
-import { type BuildPaths } from "./types/config";
+import type {BuildPaths} from "./types/config";
 import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 
 export function buildPlugins(
