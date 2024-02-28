@@ -7,6 +7,7 @@ import {
 } from "webpack";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import { type BuildPaths } from "./types/config";
+import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 
 export function buildPlugins(
   paths: BuildPaths,
@@ -25,5 +26,8 @@ export function buildPlugins(
       IS_DEV: JSON.stringify(isDev),
     }),
     new HotModuleReplacementPlugin(),
+    new BundleAnalyzerPlugin({
+      openAnalyzer: false,
+    }),
   ];
 }
