@@ -1,25 +1,28 @@
 .app-link {
-  &.primary {
-    color: var(--primary-color);
+  font: var(--font-m);
+  color: var(--icon);
 
-    &:hover {
-      color: var(--accent-redesigned);
-    }
+  &:hover {
+    color: var(--accent);
   }
 
-  &.inverted {
-    color: var(--inverted-primary-color);
-
-    &:hover {
-      color: var(--accent-redesigned);
-    }
+  &.succes {
+    color: var(--success);
   }
 
-  &.red {
-    color: var(--cancel-redesigned);
+  &.error {
+    color: var(--error);
+  }
 
-    &:hover {
-      opacity: 0.8;
-    }
+  &.s {
+    font: var(--font-s);
+  }
+
+  &.l {
+    font: var(--font-l);
+  }
+
+  &.disabled {
+    opacity: 0.5;
   }
 }

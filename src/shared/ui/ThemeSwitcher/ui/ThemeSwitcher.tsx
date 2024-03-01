@@ -1,4 +1,5 @@
-import { type FC, memo } from "react";
+import {  memo } from "react";
+import type {FC} from "react";
 import { Theme, useTheme } from "app/providers/ThemeProvider";
 
 import LightIcon from "shared/assets/icons/theme-light.svg";
@@ -16,7 +17,6 @@ const ThemeSwitcher: FC<ThemeSwitcherProps> = memo((props) => {
 
   return (
     <AppButton
-      variant="clear"
       className={classNames("", [className ?? ""])}
       onClick={toggleTheme}
     >

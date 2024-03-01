@@ -1,4 +1,5 @@
-import { type FC, type ReactNode, useMemo, useState } from "react";
+import {   useMemo, useState } from "react";
+import type {FC, ReactNode} from "react";
 
 import {
   Theme,

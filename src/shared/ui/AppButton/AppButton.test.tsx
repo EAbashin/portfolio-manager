@@ -9,8 +9,8 @@ describe("AppButton", () => {
   });
 
   test("Test clear theme", () => {
-    render(<AppButton variant="clear">TEST</AppButton>);
+    render(<AppButton variant="outlined">TEST</AppButton>);
     const button = screen.getByText("TEST");
-    expect(button).toHaveClass("clear");
+    expect(button).toHaveClass("outlined");
   });
 });

@@ -1,4 +1,4 @@
-import { type FC } from "react";
+import type {FC} from "react";
 import { useTranslation } from "react-i18next";
 
 import { classNames } from "shared/lib/classNames/classNames";
@@ -20,7 +20,6 @@ export const LanguageSwitcher: FC<LanguageSwitcherProps> = (props) => {
 
   return (
     <AppButton
-      variant="clear"
       size="l"
       className={classNames("", [className ?? ""])}
       onClick={() => {
