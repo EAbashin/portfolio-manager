@@ -1,9 +1,9 @@
-import type {FC} from "react";
+import type { FC } from "react";
 import { useTranslation } from "react-i18next";
 import { classNames } from "shared/lib/classNames/classNames";
 import cls from "./ErrorPage.module.scss";
 
-const ErrorPage: FC = () => {
+export const ErrorPage: FC = () => {
   const { t } = useTranslation("error");
 
   const reloadPage = (): void => {
@@ -17,5 +17,3 @@ const ErrorPage: FC = () => {
     </div>
   );
 };
-
-export default ErrorPage;

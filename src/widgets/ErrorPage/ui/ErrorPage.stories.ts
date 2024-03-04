@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Sidebar } from "./Sidebar";
+import { ErrorPage } from "./ErrorPage";
 import { ThemeDecorator } from "shared/config/storybook/decorators/ThemeDecorator";
 import { Theme } from "app/providers/ThemeProvider";
 
 const meta = {
-  title: "widget/Sidebar",
-  component: Sidebar,
+  title: "widget/ErrorPage",
+  component: ErrorPage,
   tags: ["autodocs"],
-} satisfies Meta<typeof Sidebar>;
+} satisfies Meta<typeof ErrorPage>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

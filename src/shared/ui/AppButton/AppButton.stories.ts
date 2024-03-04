@@ -1,15 +1,12 @@
 import type { Meta, StoryObj } from "@storybook/react";
 
 import { AppButton } from "./AppButton";
-import { ThemeDecorator } from "shared/config/storybook/ThemeDecorator/ThemeDecorator";
+import { ThemeDecorator } from "shared/config/storybook/decorators/ThemeDecorator";
 import { Theme } from "app/providers/ThemeProvider";
 
 const meta = {
   title: "shared/AppButton",
   component: AppButton,
-  parameters: {
-    layout: "centered",
-  },
   tags: ["autodocs"],
 } satisfies Meta<typeof AppButton>;
 
